@@ -1,11 +1,12 @@
-<h1 align='center'>API Центра принятия жалоб</h1>
+<h1 align='center'>API Приложения по бронированию номеров</h1>
 
-Проект представляет собой центр принятия жалоб сделанный с использованием технологии Django Rest Framework. В проекте реализован весь CRUD, авторизация(использовалась библиотека djoser), дополнительные @action под тематику проекта 
+Проект представляет собой приложения по бронированию номеров сделанный с использованием технологии Django Rest Framework. В проекте реализован весь CRUD, авторизация(использовалась библиотека djoser), дополнительные @action под тематику проекта 
 
 ### Тестирование
-* Тестирование создания пользователя.
-* Тестирование авторизации.
-* Тестирование вывода всех жалоб.
+* Тестирование добавления брони.
+* Тестирование добавления в избранное .
+* Тестирование удаления из избранного.
+* Тестирование добавления отзыва.
 
 
 ### API Endpoint
@@ -16,34 +17,35 @@
 * **/auth/token/login/** (Авторизация пользователя)
 * **/api/users/logout/** (Выход пользователя)
 * **/api/users/me/** (Чтение пользователя GET, Редактирование пользователя POST, Удаление пользователя DELETE)
-* **/complain_api/user/get_complains/** (Получение всех обращений POST)
+* **/booking_api/user/add_to_fav/** (Добавление в избранное PUT)
+* **/booking_api/user/del_from_fav/** (Удаление из избранного PUT)
   
 
-#### Complains
+#### Hotel
 
-* **/complain_api/complain/** (Вывод всех жалоб, 'GET')
-* **/complain_api/complain/** (Добавление жалобы, 'POST')
-* **/complain_api/complain/pk/** (Чтение жалобы, 'GET')
-* **/complain_api/complain/pk/** (Редактирование жалобы, 'PUT')
-* **/complain_api/complain/pk/** (Удаление жалобы, 'DELETE')
-
-
-#### Category
-
-* **/complain_api/category/** (Вывод всех категорий жалоб, 'GET')
-* **/complain_api/category/** (Добавление категории, 'POST')
-* **/complain_api/category/pk/** (Чтение категории, 'GET')
-* **/complain_api/category/pk/** (Редактирование категории, 'PUT')
-* **/complain_api/category/pk/** (Удаление категории, 'DELETE')
+* **/booking_api/hotel/** (Вывод всех  отелей, 'GET')
+* **/booking_api/hotel/** (Добавление отеля, 'POST')
+* **/booking_api/hotel/pk/** (Чтение отеля, 'GET')
+* **/booking_api/hotel/pk/** (Редактирование отеля, 'PUT')
+* **/booking_api/hotel/pk/** (Удаление отеля, 'DELETE')
 
 
-#### Answer
+#### Booking
 
-* **/complain_api/answer/** (Вывод всех ответов, 'GET')
-* **/complain_api/answer/** (Добавление ответа, 'POST')
-* **/complain_api/answer/pk/** (Чтение ответа, 'GET')
-* **/complain_api/answer/pk/** (Редактирование заказа, 'PUT')
-* **/complain_api/answer/pk/** (Удаление заказа, 'DELETE')
+* **/booking_api/bookin/** (Вывод всех записей, 'GET')
+* **/booking_api/bookin/** (Добавление брони, 'POST')
+* **/booking_api/bookin/pk/** (Чтение брони, 'GET')
+* **/booking_api/bookin/pk/** (Редактирование брони, 'PUT')
+* **/booking_api/bookin/pk/** (Удаление брони, 'DELETE')
+
+
+#### Review
+
+* **/booking_api/review/** (Вывод всех отзывов, 'GET')
+* **/booking_api/review/** (Добавление отзыва, 'POST')
+* **/booking_api/review/pk/** (Чтение отзыва, 'GET')
+* **/booking_api/review/pk/** (Редактирование отзыва, 'PUT')
+* **/booking_api/review/pk/** (Удаление отзыва, 'DELETE')
 
 
 ### Install 
